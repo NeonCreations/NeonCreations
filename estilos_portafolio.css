@@ -1,0 +1,267 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fefefe;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Introducción */
+.banner {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)),
+              url('img/Escenario.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.banner h1 {
+  font-size: 3em;
+  color: white;
+  text-align: center;
+}
+
+.descripcion {
+  padding: 40px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+/* Presentación */
+.presentacion {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.presentacion .texto {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.presentacion .foto {
+  flex: 1 1 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentacion .foto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Galería */
+.galeria {
+  margin: 0 auto;
+  display: flex;
+  width: auto;
+  height: 320px;
+  overflow: hidden;
+}
+
+.galeria .item {
+  position: relative;
+  flex-grow: 1;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Se ve recortado como rectángulo delgado */
+  transition: 0.5s ease;
+  opacity: 0.8;
+}
+
+.galeria .item:hover {
+  width: 150px;
+}
+
+.galeria .item:hover img {
+  object-fit: contain; /* Al pasar el cursor, se ajusta a tamaño original */
+  opacity: 1;
+  filter: contrast(120%);
+  transform: scale(1);
+  cursor: crosshair;
+}
+
+/* Texto encima de la imagen */
+.galeria .texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.galeria .item:hover .texto {
+  opacity: 1;
+}
+
+
+.galeria .texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.galeria .item:hover .texto {
+  opacity: 1;
+}
+
+
+
+
+/*////////////////////*/
+
+.galeria_audiovisual {
+  margin: 0 auto;
+  display: flex;
+  width: auto;
+  height: 320px;
+  overflow: hidden;
+}
+
+.galeria_audiovisual .item {
+  position: relative;
+  flex-grow: 1;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeria_audiovisual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Se ve recortado como rectángulo delgado */
+  transition: 0.5s ease;
+  opacity: 0.8;
+}
+
+.galeria_audiovisual .item:hover {
+  width: 150px;
+}
+
+.galeria_audiovisual .item:hover img {
+  object-fit: contain; /* Al pasar el cursor, se ajusta a tamaño original */
+  opacity: 1;
+  filter: contrast(120%);
+  transform: scale(1);
+  cursor: crosshair;
+}
+
+.galeria_audiovisual .texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.galeria_audiovisual .item:hover .texto {
+  opacity: 1;
+}
+
+
+
+/* Contacto */
+.contacto {
+  padding: 40px;
+  background-color: #222;
+  color: #eee;
+  text-align: center;
+}
+
+.contacto a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.contacto ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.contacto li {
+  margin: 10px 0;
+}
+
+button {
+  font-family: Arial, sans-serif;
+  color: #04C4D9; /* Azul tipo hipervínculo */
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-enlace:hover {
+  color: #04C4D9;
+}
+
+/* Mensaje flotante */
+#mensajeCopiado {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+  font-size: 0.9rem;
+}
+
+#mensajeCopiado.mostrar {
+  opacity: 1;
+}

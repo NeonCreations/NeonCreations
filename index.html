@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Kermito</title>
+  <link rel="stylesheet" href="estilos_portafolio.css">
+</head>
+<body>
+
+  <!-- Introducción -->
+<section class="intro">
+  <div class="banner">
+    <h1>Kermit Xavier Hernández Vázquez</h1>
+  </div>
+  <div class="descripcion">
+    <p>Diseñador gráfico y animador digital apasionado por el detalle visual, la narrativa emocional y la exploración de ideas creativas. Destaco en dirección visual, animación 2D/3D, ilustración y diseño interactivo.</p>
+  </div>
+</section>
+
+
+  <!-- Presentación -->
+  <section class="presentacion">
+    <div class="texto">
+      <h2>¿Quien soy?</h2>
+      <p>Soy Kermit Hernandez, un creador multidisciplinario con interés en combinar estética, emociones y funcionalidad. He participado en proyectos en colaboración con diferentes empresas en busqueda de un mensaje que su publico pueda percibir como parte de su identidad corporativa creando mas que una experiencia visual. Mi empresa, Neon Creations, busca explorar desde el diseño editorial hasta la animación narrativa, creyendo firmemente en que el arte comunica y transforma.</p>
+    </div>
+    <div class="foto">
+      <img src="img/foto3.jpg" alt="Mi foto" id="foto1">
+    </div>
+  </section>
+
+<section>
+  <!-- Galería -->
+  <h2>Portafolio</h2>
+ <div class="galeria">
+  <div class="item">
+    <img src="img/proyecto1.jpg" alt="Proyecto 1">
+    <div class="texto">Narrativa audiovisual</div>
+  </div>
+  <div class="item">
+    <img src="img/proyecto2.jpg" alt="Proyecto 2">
+    <div class="texto">Pose Sheet</div>
+  </div>
+  <div class="item">
+    <img src="img/proyecto3.png" alt="Proyecto 3">
+    <div class="texto">Model Sheet</div>
+  </div>
+  <div class="item">
+    <img src="img/proy.png" alt="Proyecto 4">
+    <div class="texto">Storyboard</div>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<h2>Portafolio audiovisual</h2>
+ <div class="galeria_audiovisual">
+  <div class="item">
+    <img src="img/proyecto4.png" alt="Proyecto 1">
+    <div class="texto">Narrativa audiovisual</div>
+  </div>
+  <div class="item">
+    <img src="img/proyecto5.png" alt="Proyecto 2">
+    <div class="texto">Pose Sheets</div>
+  </div>
+  <div class="item">
+    <img src="img/proyecto6.jpg" alt="Proyecto 3">
+    <div class="texto">Model Sheet</div>
+  </div>
+  <div class="item">
+    <img src="img/proyecto8.jpeg" alt="Proyecto 4">
+    <div class="texto">Storyboard</div>
+  </div>
+</div>
+
+</section>
+
+  <!-- Contacto -->
+  <section class="contacto">
+    <h2>Contacto</h2>
+    <p>¡Estare contento de trabajar contigo!</p>
+    <ul>
+  <button onclick="copiarCorreo()" class="btn-enlace">xaviercit66@gmail.com</button>
+
+<span id="mensajeCopiado">¡Correo copiado!</span>
+
+
+      <li><a href="https://www.instagram.com/neon_creations_esc?utm_source=ig_web_button_share_sheet&igsh=MWE2Z3NtaHRoNXpjag==">Instagram</a></li>
+      <li><a href="https://www.facebook.com/Ne0nCreati0ns/">Facebook</a></li>
+      <li><a href="https://www.linkedin.com/in/kermit-hernández-vázquez-b61b8327a/">LinkedIn</a></li>
+    </ul>
+<script>
+ function copiarCorreo() {
+  const correo = "ejemplo@neoncreations.com";
+  navigator.clipboard.writeText(correo).then(() => {
+    const mensaje = document.getElementById("mensajeCopiado");
+    mensaje.classList.add("mostrar");
+    setTimeout(() => {
+      mensaje.classList.remove("mostrar");
+    }, 2000);
+  });
+}
+
+</script>
+  </section>
+
+
+</body>
+</html>
